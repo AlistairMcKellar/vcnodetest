@@ -1,0 +1,16 @@
+﻿extends layout
+
+block content
+    div(class="row fill")
+        div(class="col-xs-12 fill")
+                div(class="row fill")
+                    div(id="MyGoogleMapID")
+
+
+block scripts
+    script(src="/javascripts/MapRender.js")          
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTbkoShScdbiTv3Zi3PfepjMoMyFTzbeY&callback=initMap")
+       
+
+
+

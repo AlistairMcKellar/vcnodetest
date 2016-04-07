@@ -1,0 +1,15 @@
+﻿extends layout
+
+block content
+    p(id="posdata") something else
+    p(id="trustname") boohoo
+
+
+block scripts   
+    script(type="text/javascript").
+       getGeoLocation(function()
+       {
+             var long = coordinates.long;
+             var lat = coordinates.lat;
+             document.getElementById("posdata").innerHTML = "long: " + long + "   Lat: " + lat;
+       });

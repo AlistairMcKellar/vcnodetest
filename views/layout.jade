@@ -1,0 +1,40 @@
+﻿doctype html
+html
+  head
+    title ALD2 - HackSummit
+    link(href="/stylesheets/bootstrap.min.css",rel="stylesheet")
+    link(href="/stylesheets/bootstrap-theme.min.css",rel="stylesheet")
+    link(href="/stylesheets/site.css",rel="stylesheet")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+  body(class="body")
+    div(class="box container-fluid")
+        div(class="row header")
+            h1(class="hidden-sm hidden-md hidden-lg h3") Immunisation & Vaccinations
+            h1(class="hidden-xs hidden-md hidden-lg h2") Immunisation & Vaccinations
+            h1(class="hidden-xs hidden-sm") England Immunisations and Vaccinations By CCG
+        div(class="row content")
+            div(class="content fill")
+                div(class="row fill")
+                    div(class="col-xs-12 fill")
+                        block content
+        div(class="row footer")
+            div(class="row")
+                div(class="hidden-xs hidden-sm col-md-2")
+                   p HackSummit
+                div(class="col-xs-12 col-md-8")
+                   p(id="projectInfo", type="button",class="btn btn-sm btn-primary", data-toggle="popover") ?             
+                div(class="hidden-xs hidden-sm col-md-2")
+                   p ALD2
+                   div(id="MyInfo",class="hidden")
+
+    script(src="/javascripts/jquery-2.2.0.min.js")
+    script(src="/javascripts/bootstrap.min.js")
+    block scripts
+    script.
+        $('#projectInfo').popover({
+            title: "Immunisations and Vaccinations By CCG",
+            content:"<p>Immunisation is the safest and most effective way of giving protection against a disease.  If enough people in the community are immunised, the infection can no longer be spread from person to person and the disease dies out altogether. – NHS England <br/><br/> This graph represents data collected by NHS England showing immunisation in children for various diseases within a Clinical Commissioning Group (CCG)   </p>",
+            html: true,
+            placement:"top"
+        });
+
